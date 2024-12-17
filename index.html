@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Bio</title>
+    <title>My Professional Bio</title>
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
@@ -26,110 +26,140 @@
             width: 90%;
             max-width: 700px;
             border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            text-align: center;
             transition: transform 0.3s ease;
+            text-align: center;
         }
 
         .bio-container:hover {
-            transform: scale(1.03);
+            transform: translateY(-5px);
         }
 
         .header {
             background: #4CAF50;
-            padding: 20px 0;
             color: #fff;
-        }
-
-        .header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            margin-bottom: 10px;
+            padding: 20px 0;
         }
 
         h1 {
             margin: 0;
-            font-size: 26px;
+            font-size: 28px;
             letter-spacing: 1px;
         }
 
-        p {
-            margin: 10px 0;
-            font-size: 16px;
-            color: #555;
+        h2 {
+            margin: 20px 0 10px;
+            color: #4CAF50;
+            font-size: 20px;
         }
 
-        .details {
+        .details, .section {
             padding: 20px;
             text-align: left;
         }
 
+        .details p, .section p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
         .details strong {
             display: inline-block;
-            width: 150px;
-            font-weight: 600;
+            width: 160px;
             color: #333;
+            font-weight: 600;
+        }
+
+        .line {
+            height: 1px;
+            background: #ddd;
+            margin: 10px 0;
         }
 
         .footer {
             background: #f0f0f0;
-            padding: 15px;
+            padding: 10px;
             font-size: 14px;
             color: #777;
             text-align: center;
         }
 
-        .social-icons {
-            margin-top: 15px;
-        }
-
-        .social-icons a {
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
             text-decoration: none;
-            color: #4CAF50;
-            font-size: 20px;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
         }
 
-        .social-icons a:hover {
-            color: #2E7D32;
+        .btn:hover {
+            background-color: #2E7D32;
         }
+
     </style>
 </head>
 <body>
     <div class="bio-container">
-        <!-- Header with Photo -->
+        <!-- Header -->
         <div class="header">
-            <img src="https://via.placeholder.com/150" alt="Your Photo">
             <h1>Prahlad Chaudhary</h1>
-            <p>Web Developer | Tech Enthusiast</p>
+            <p>Web Developer</p>
         </div>
 
-        <!-- Bio Details -->
+        <!-- Personal Details -->
         <div class="details">
+            <h2>Personal Details</h2>
             <p><strong>Age:</strong> 20</p>
             <p><strong>Date of Birth:</strong> 15th January 2004</p>
             <p><strong>Address:</strong> Sola, Ahmedabad, Gujarat 380060</p>
-            <p><strong>Profession:</strong> Web Developer</p>
-            <p><strong>Project:</strong> TechZone Laptops (Online Laptop Order System)</p>
-            <p><strong>Skills:</strong> HTML, CSS, Bootstrap, JavaScript, PHP, MySQL</p>
-            <p><strong>Interests:</strong> Web Development, E-Commerce Projects, Tech Innovation</p>
         </div>
 
-        <!-- Social Media Links -->
-        <div class="social-icons">
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="line"></div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>
+                A passionate web developer with experience in creating responsive and user-friendly websites. Skilled in HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL. 
+                Successfully developed **TechZone Laptops**, an online laptop ordering system that streamlines e-commerce processes for clients.
+            </p>
         </div>
+
+        <div class="line"></div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Key Skills</h2>
+            <p>✔ HTML, CSS, Bootstrap</p>
+            <p>✔ JavaScript (ES6), PHP</p>
+            <p>✔ MySQL Database Management</p>
+            <p>✔ E-Commerce Website Development</p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Achievements -->
+        <div class="section">
+            <h2>Achievements</h2>
+            <p>🏆 Successfully developed and deployed **TechZone Laptops** for online orders.</p>
+            <p>🏆 Completed multiple e-commerce projects within tight deadlines.</p>
+            <p>🏆 Proactively implemented innovative UI/UX solutions to improve customer engagement.</p>
+        </div>
+
+        <div class="line"></div>
 
         <!-- Footer -->
         <div class="footer">
-            © 2024 | Prahlad's Portfolio
+            <p>For more information, contact me:</p>
+            <a href="mailto:prahlad@example.com" class="btn">Get in Touch</a>
+            <p>© 2024 | Prahlad's Professional Bio</p>
         </div>
     </div>
 </body>
