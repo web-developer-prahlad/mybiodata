@@ -1,173 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prahlad Chaudhary - Resume</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Bio</title>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #247729, #247729);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      min-height: 100vh;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
+        .bio-container {
+            background: #fff;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: left; 
+            padding: 30px;
+        }
 
-    .resume-container {
-      width: 100%;
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-      animation: fadeIn 1.5s ease forwards;
-    }
+        .bio-container:hover {
+            transform: translateY(-5px);
+        }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 5px;
-    }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
 
-    h2 {
-      font-size: 1.5em;
-      color: #ffd700;
-      margin: 30px 0 15px;
-    }
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px; 
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    p, li {
-      font-size: 1em;
-      line-height: 1.6;
-    }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        h2 {
+            margin: 20px 0 10px;
+            color: #4CAF50;
+            font-size: 20px;
+        }
 
-    .section {
-      margin-bottom: 20px;
-      animation: fadeInUp 1s ease both;
-    }
+        .details, .section {
+            padding: 20px;
+            text-align: left;
+        }
 
-    .section:nth-child(even) {
-      animation-delay: 0.3s;
-    }
+        .details p, .section p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
 
-    .section:nth-child(odd) {
-      animation-delay: 0.6s;
-    }
+        .details strong {
+            display: inline-block;
+            width: 160px;
+            color: #333;
+            font-weight: 600;
+        }
 
-    a {
-      color: #00ffe5;
-      text-decoration: none;
-    }
+        .line {
+            height: 1px;
+            background: #ddd;
+            margin: 10px 0;
+        }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #00ffe5;
-      color: #111;
-      font-weight: bold;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
+        .footer {
+            background: #f0f0f0;
+            padding: 10px;
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+        }
 
-    .btn:hover {
-      background: #00c9b7;
-      transform: scale(1.05);
-    }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+        .btn:hover {
+            background-color: #2E7D32;
+        }
+    </style>
 </head>
 <body>
+    <div class="bio-container">
+        <!-- Header -->
+        <div class="header">
+           <img src="prahlad.jpg" alt="my photo" class="photo">
 
-  <div class="resume-container">
-      <img src="prahlad.jpg" alt="my photo" class="photo">
-    <div class="section">
-      <h1>Prahlad Chaudhary</h1>
-      <p>Web Developer • Laravel Enthusiast</p>
+            <div>
+                <h1>Prahlad Chaudhary</h1>
+                <p>Web Developer </p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="details">
+            <h2>Personal Details</h2>
+            <p><strong>Age:</strong> 20</p>
+            <p><strong>Date of Birth:</strong> 15th January 2004</p>
+            <p><strong>Religion:</strong> Hindu</p> 
+            <p><strong>Address:</strong> Sola,Ahmedabad,Gujarat</p>
+            <p><strong>Pincode:</strong> 380060</p> 
+            <p><strong>Contact N.:</strong> +91 9602748649</p>
+        </div>
+
+        <div class="line"></div>
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>
+                A passionate web developer with in creating responsive and user-friendly websites. Skilled in HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL. 
+              </p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <p>✔ HTML, CSS, Bootstrap</p>
+            <p>✔ JavaScript, PHP</p>
+            <p>✔ MySQL Database</p>
+            <p>✔ E-Commerce Website Development</p>
+        </div>
+
+        <div class="line"></div>
+        <div class="section">
+            <h2>Achievement</h2>
+            <p># Successfully developed and deployed "TechZone Laptop" for online orders.</p>
+            <p># Completed multiple e-commerce projects within tight deadlines.</p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>For more information, contact me:</p>
+            <a href="#" class="btn">Get in Touch</a>
+        </div>
     </div>
-
-    <div class="section">
-      <h2>Career Objective</h2>
-      <p>To build scalable and impactful web applications while growing my skills in Laravel, MySQL, and full-stack development. Currently pursuing an internship and exploring real-world project experience.</p>
-    </div>
-
-    <div class="section">
-      <h2>Personal Info</h2>
-      <p><strong>Age:</strong> 21</p>
-      <p><strong>DOB:</strong> 15 Jan 2004</p>
-      <p><strong>Location:</strong> Ahmedabad, Gujarat</p>
-      <p><strong>Email:</strong> prahladchaudhary2004@gmail.com</p>
-      <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/prahlad</a></p>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript, Bootstrap, Tailwind CSS</li>
-        <li>PHP, Laravel, MySQL</li>
-        <li>Git, GitHub, Responsive Design</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Admin & User Dashboard (Laravel):</strong> Role-based login, project/task management, timesheets.</li>
-        <li><strong>Online Mobile Shop:</strong> E-commerce system with cart, orders, admin product manager.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>BCA(Bachelor of Computer Applications)</strong><br>Ganpat University, 2022-2025</p>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <p><strong>Intern - NCode Technologies Inc.</strong><br>Feb 2025 - Present</p>
-      <ul>
-        <li>Worked on admin/user dashboards using Laravel.</li>
-        <li>Assisted in live projects involving frontend/backend integration.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Full Stack Development – Udemy</li>
-        <li>Laravel for Beginners – Coursera</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <p>For more information, contact me:</p>
-      <a href="mailto:prahladchaudhary2004@gmail.com" class="btn">Get in Touch</a>
-    </div>
-  </div>
-
 </body>
 </html>
