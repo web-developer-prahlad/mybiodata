@@ -1,131 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Professional Resume - Prahlad Chaudhary</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
 
-    .container {
-      width: 80%;
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #247729, #247729);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    h1, h2 {
-      color: #2c3e50;
-    }
+        .bio-container {
+            background: #fff;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: left; 
+            padding: 30px;
+        }
 
-    h1 {
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 10px;
-    }
+        .bio-container:hover {
+            transform: translateY(-5px);
+        }
 
-    .section {
-      margin-bottom: 25px;
-    }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
 
-    .section-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #3498db;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
-    }
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px; 
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    .info p, .experience, .education, .skills, .projects, .certifications {
-      margin: 5px 0;
-    }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
 
-    .label {
-      font-weight: bold;
-      color: #2c3e50;
-    }
+        h2 {
+            margin: 20px 0 10px;
+            color: #4CAF50;
+            font-size: 20px;
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        .details, .section {
+            padding: 20px;
+            text-align: left;
+        }
 
-    ul li {
-      margin-bottom: 6px;
-    }
-  </style>
+        .details p, .section p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .details strong {
+            display: inline-block;
+            width: 160px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .line {
+            height: 1px;
+            background: #ddd;
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2E7D32;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Prahlad Chaudhary</h1>
-    <div class="info section">
-      <p><span class="label">Phone:</span> +91-XXXXXXXXXX</p>
-      <p><span class="label">Email:</span> prahlad@example.com</p>
-      <p><span class="label">Location:</span> City, State, India</p>
-      <p><span class="label">LinkedIn:</span> linkedin.com/in/prahlad</p>
-    </div>
+    <div class="bio-container">
+        <!-- Header -->
+        <div class="header">
+            <img src="prahlad.jpg" alt="my photo" class="photo">
+            <div>
+                <h1>Prahlad Chaudhary</h1>
+                <p>Web Developer</p>
+            </div>
+        </div>
 
-    <div class="section">
-      <div class="section-title">Career Objective</div>
-      <p>Motivated and detail-oriented web developer currently pursuing an internship. Passionate about building efficient and user-friendly web applications with modern technologies.</p>
-    </div>
+        <div class="line"></div>
 
-    <div class="section">
-      <div class="section-title">Education</div>
-      <div class="education">
-        <p><strong>Bachelor of Technology in Computer Science</strong></p>
-        <p>XYZ University, 2024</p>
-      </div>
-    </div>
+        <!-- Personal Details -->
+        <div class="details">
+            <h2>Personal Details</h2>
+            <p><strong>Age:</strong> 20</p>
+            <p><strong>Date of Birth:</strong> 15th January 2004</p>
+            <p><strong>Religion:</strong> Hindu</p>
+            <p><strong>Address:</strong> Ahmedabad, Gujarat, India</p>
+            <p><strong>Pincode:</strong> 380060</p>
+            <p><strong>Contact No.:</strong> +91 748649XXXX</p>
+            <p><strong>Email:</strong> prahlad@example.com</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/prahlad</p>
+        </div>
 
-    <div class="section">
-      <div class="section-title">Skills</div>
-      <div class="skills">
-        <ul>
-          <li>HTML, CSS, JavaScript, Bootstrap, Tailwind CSS</li>
-          <li>PHP, Laravel, MySQL</li>
-          <li>Version Control: Git, GitHub</li>
-        </ul>
-      </div>
-    </div>
+        <div class="line"></div>
 
-    <div class="section">
-      <div class="section-title">Projects</div>
-      <div class="projects">
-        <p><strong>Admin & User Dashboard (Laravel)</strong></p>
-        <p>Developed a fully functional admin/user panel with role-based authentication, task management, and project tracking using Laravel and MySQL.</p>
-        
-        <p><strong>Online Mobile Shop</strong></p>
-        <p>Created an e-commerce website with product management, user authentication, order processing, and a cart system.</p>
-      </div>
-    </div>
+        <!-- Career Objective -->
+        <div class="section">
+            <h2>Career Objective</h2>
+            <p>Motivated and detail-oriented web developer currently pursuing an internship. Passionate about building efficient and user-friendly web applications using modern technologies like Laravel, MySQL, and Bootstrap.</p>
+        </div>
 
-    <div class="section">
-      <div class="section-title">Experience</div>
-      <div class="experience">
-        <p><strong>Intern - NCode Technologies Inc.</strong></p>
-        <p>Mar 2025 – Present</p>
-        <ul>
-          <li>Assisted in developing Laravel-based web apps.</li>
-          <li>Worked on user/admin dashboards, database structure, and authentication.</li>
-        </ul>
-      </div>
-    </div>
+        <div class="line"></div>
 
-    <div class="section">
-      <div class="section-title">Certifications</div>
-      <div class="certifications">
-        <ul>
-          <li>Full Stack Development – Udemy</li>
-          <li>Laravel for Beginners – Coursera</li>
-        </ul>
-      </div>
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Technology in Computer Science</strong></p>
+            <p>XYZ University, 2024</p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, Bootstrap, Tailwind CSS</li>
+                <li>PHP, Laravel, MySQL</li>
+                <li>Git, GitHub</li>
+            </ul>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2>Projects</h2>
+            <p><strong>Admin & User Dashboard (Laravel)</strong><br>
+            Developed a fully functional admin/user panel with role-based authentication, task management, and project tracking.</p>
+
+            <p><strong>Online Mobile Shop</strong><br>
+            Built a complete e-commerce platform with product browsing, cart, checkout, and admin management features.</p>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2>Experience</h2>
+            <p><strong>Intern - NCode Technologies Inc.</strong><br>
+            March 2025 – Present</p>
+            <ul>
+                <li>Worked on Laravel-based admin and user dashboards.</li>
+                <li>Assisted in real-time project handling including database and frontend components.</li>
+            </ul>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Full Stack Development – Udemy</li>
+                <li>Laravel for Beginners – Coursera</li>
+            </ul>
+        </div>
+
+        <div class="line"></div>
+
+        <!-- Footer -->
+        <div class="section">
+            <a href="mailto:prahlad@example.com" class="btn">Get in Touch</a>
+        </div>
     </div>
-  </div>
 </body>
 </html>
