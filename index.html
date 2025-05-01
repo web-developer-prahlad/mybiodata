@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prahlad Chaudhary - Portfolio</title>
+  <title>Prahlad Chaudhary - Bio</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -18,25 +18,30 @@
       min-height: 100vh;
       padding: 20px;
       scroll-behavior: smooth;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
     .bio-container {
       background: #fff;
-      max-width: 850px;
+      max-width: 900px;
       width: 100%;
       border-radius: 16px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
       overflow: hidden;
-      animation: popIn 1s ease;
+      animation: slideUp 1.2s ease;
     }
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     .header {
       background: #f5f5f5;
       padding: 30px;
       text-align: center;
-      position: relative;
+      animation: glow 3s ease-in-out infinite alternate;
     }
     .photo {
       width: 120px;
@@ -82,28 +87,37 @@
       width: 160px;
       display: inline-block;
     }
-    .like-section {
+    .contact-section {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       background: #fafafa;
     }
-    .like-btn {
-      background: #ff4081;
+    .contact-btn {
+      background: #4caf50;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 25px;
       color: white;
       font-size: 16px;
       border-radius: 30px;
       cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
-    .like-btn:hover {
+    .contact-btn:hover {
+      background: #388e3c;
       transform: scale(1.05);
     }
-    .like-count {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #444;
+    .hover-skill {
+      transition: all 0.3s ease;
+    }
+    .hover-skill:hover {
+      transform: translateX(10px);
+      color: #4caf50;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #4caf50; }
+      100% { box-shadow: 0 0 25px #4caf50; }
     }
   </style>
 </head>
@@ -117,26 +131,21 @@
   </div>
 
   <div class="section reveal">
-    <h2>Personal Details</h2>
+    <h2>About Me</h2>
+    <p><strong>Name:</strong> Prahlad Chaudhary</p>
     <p><strong>Age:</strong> 20</p>
-    <p><strong>Date of Birth:</strong> 15th January 2004</p>
-    <p><strong>Religion:</strong> Hindu</p>
-    <p><strong>Address:</strong> Sola, Ahmedabad, Gujarat</p>
-    <p><strong>Pincode:</strong> 380060</p>
-    <p><strong>Contact:</strong> +91 96027489</p>
-  </div>
-
-  <div class="section reveal">
-    <h2>Professional Summary</h2>
-    <p>I am a passionate web developer with a strong focus on Laravel and frontend development, building smooth, scalable user experiences.</p>
+    <p><strong>Email:</strong> prahladchaudhary2004@gmail.com</p>
+    <p><strong>Phone:</strong> +91 96027486**</p>
+    <p><strong>Location:</strong> Ahmedabad, Gujarat</p>
+    <p>I am a dedicated and creative Laravel developer who enjoys turning ideas into interactive applications. With hands-on experience in both frontend and backend development, I strive to build solutions that are user-friendly and efficient.</p>
   </div>
 
   <div class="section reveal">
     <h2>Skills</h2>
-    <p>- Laravel, PHP, MySQL</p>
-    <p>- HTML5, CSS3, JavaScript</p>
-    <p>- Bootstrap, Tailwind CSS</p>
-    <p>- Git, REST APIs</p>
+    <p class="hover-skill">- Laravel, PHP, MySQL</p>
+    <p class="hover-skill">- HTML5, CSS3, JavaScript</p>
+    <p class="hover-skill">- Bootstrap, Tailwind CSS</p>
+    <p class="hover-skill">- Git</p>
   </div>
 
   <div class="section reveal">
@@ -146,15 +155,20 @@
     <p>- Improved application performance & design</p>
   </div>
 
-  <div class="like-section">
-    <button class="like-btn" onclick="likeMe()">❤️ Like</button>
-    <div class="like-count" id="like-count">0 people liked this</div>
+  <div class="section reveal">
+    <h2>Projects</h2>
+    <p><strong>V-Work Management System</strong> - Laravel-based task/project dashboard</p>
+    <p><strong>Online Mobile Shop</strong> - E-commerce site with cart, orders, and admin panel</p>
+    <p><strong>Chat System</strong> - WhatsApp-like real-time messaging using Laravel</p>
+  </div>
+
+  <div class="contact-section">
+    <a href="mailto:prahladchaudhary2004@gmail.com" class="contact-btn">Contact Me</a>
   </div>
 </div>
 
 <script>
-  // Typing effect
-  const text = ["Web Developer", "Laravel Lover", "UI/UX Enthusiast", "Passionate Coder"];
+  const text = ["Web Developer", "Laravel Developer"];
   let index = 0, charIndex = 0, current = "";
   function type() {
     if (charIndex < text[index].length) {
@@ -171,7 +185,6 @@
   }
   type();
 
-  // Scroll reveal
   const sections = document.querySelectorAll('.section');
   window.addEventListener('scroll', () => {
     sections.forEach(sec => {
@@ -181,42 +194,7 @@
       }
     });
   });
-
-  // Like button
-  let likes = 0;
-  function likeMe() {
-    likes++;
-    document.getElementById("like-count").textContent = `${likes} people liked this`;
-    confettiBurst();
-  }
-
-  // Confetti effect
-  function confettiBurst() {
-    const count = 30;
-    for (let i = 0; i < count; i++) {
-      const confetti = document.createElement("div");
-      confetti.style.position = "fixed";
-      confetti.style.top = Math.random() * window.innerHeight + "px";
-      confetti.style.left = Math.random() * window.innerWidth + "px";
-      confetti.style.width = "8px";
-      confetti.style.height = "8px";
-      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-      confetti.style.borderRadius = "50%";
-      confetti.style.opacity = "0.8";
-      confetti.style.animation = "fall 1.5s linear forwards";
-      document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 1500);
-    }
-  }
-
-  // Falling confetti animation
-  const styleSheet = document.styleSheets[0];
-  styleSheet.insertRule(`
-    @keyframes fall {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100px); opacity: 0; }
-    }
-  `, styleSheet.cssRules.length);
 </script>
+
 </body>
 </html>
