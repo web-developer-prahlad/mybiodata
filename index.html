@@ -1,212 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Professional Bio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #247729, #1e5e23);
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      animation: fadeIn 1s ease-in-out;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prahlad Chaudhary - Bio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.98); }
-      to { opacity: 1; transform: scale(1); }
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .bio-container {
-      background: #fff;
-      width: 90%;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      text-align: left;
-      padding: 30px;
-      animation: slideUp 0.8s ease forwards;
-    }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in;
+        }
 
-    @keyframes slideUp {
-      from { transform: translateY(30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    .bio-container:hover {
-      transform: translateY(-5px);
-    }
+        .bio-container {
+            background: #fff;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.4s ease;
+        }
 
-    .header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      animation: fadeInLeft 1s ease;
-    }
+        .bio-container:hover {
+            transform: translateY(-10px);
+        }
 
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-40px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #eee;
+        }
 
-    .photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-right: 20px;
-      border: 5px solid #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
+        .photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4CAF50;
+            margin-right: 25px;
+        }
 
-    .photo:hover {
-      transform: scale(1.05);
-    }
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+        }
 
-    h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
-      transition: color 0.3s ease;
-    }
+        .header p {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #666;
+        }
 
-    h1:hover {
-      color: #2E7D32;
-    }
+        .section {
+            padding: 25px 30px;
+            animation: fadeIn 1.5s ease;
+        }
 
-    h2 {
-      margin: 20px 0 10px;
-      color: #4CAF50;
-      font-size: 20px;
-      position: relative;
-      animation: fadeInUp 1s ease;
-    }
+        .section h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1f4037;
+        }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .section p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #444;
+        }
 
-    .details, .section {
-      padding: 20px;
-      text-align: left;
-      animation: fadeInUp 0.8s ease;
-    }
+        .section p strong {
+            color: #000;
+            width: 160px;
+            display: inline-block;
+        }
 
-    .details p, .section p {
-      margin: 10px 0;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
 
-    .details strong {
-      display: inline-block;
-      width: 160px;
-      color: #333;
-      font-weight: 600;
-    }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
 
-    .line {
-      height: 1px;
-      background: #ddd;
-      margin: 10px 0;
-    }
+        .btn:hover {
+            background: #388E3C;
+        }
 
-    .footer {
-      background: #f0f0f0;
-      padding: 10px;
-      font-size: 14px;
-      color: #777;
-      text-align: center;
-      animation: fadeInUp 0.9s ease;
-    }
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #4CAF50;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
-      margin-top: 10px;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #2E7D32;
-      transform: scale(1.05);
-    }
-  </style>
+            .photo {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="bio-container">
-    <!-- Header -->
+
+<div class="bio-container">
     <div class="header">
-      <img src="prahlad.jpg" alt="my photo" class="photo" />
-      <div>
-        <h1>Prahlad Chaudhary</h1>
-        <p>Web Developer</p>
-      </div>
+        <img src="prahlad.jpg" alt="Prahlad Photo" class="photo">
+        <div>
+            <h1>Prahlad Chaudhary</h1>
+            <p>Web Developer | Laravel & Frontend Enthusiast</p>
+        </div>
     </div>
-
-    <div class="line"></div>
-
-    <div class="details">
-      <h2>Personal Details</h2>
-      <p><strong>Age:</strong> 20</p>
-      <p><strong>Date of Birth:</strong> 15th January 2004</p>
-      <p><strong>Religion:</strong> Hindu</p>
-      <p><strong>Address:</strong> Sola, Ahmedabad, Gujarat</p>
-      <p><strong>Pincode:</strong> 380060</p>
-      <p><strong>Contact N.:</strong> +91 96027489</p>
-    </div>
-
-    <div class="line"></div>
 
     <div class="section">
-      <h2>Professional Summary</h2>
-      <p>I am a passionate Web Developer with experience in Laravel, PHP, HTML, CSS, and JavaScript. I am currently working on full-stack projects, focusing on scalable and responsive design, efficient backend logic, and delivering seamless user experiences.</p>
+        <h2>Personal Details</h2>
+        <p><strong>Age:</strong> 20</p>
+        <p><strong>Date of Birth:</strong> 15th January 2004</p>
+        <p><strong>Religion:</strong> Hindu</p>
+        <p><strong>Address:</strong> Sola, Ahmedabad, Gujarat</p>
+        <p><strong>Pincode:</strong> 380060</p>
+        <p><strong>Contact:</strong> +91 96027489</p>
     </div>
-
-    <div class="line"></div>
-
-    <!-- Skills -->
-    <div class="section">
-      <h2>Skills</h2>
-      <p>✔ Laravel, PHP, MySQL</p>
-      <p>✔ HTML5, CSS3, Bootstrap, Tailwind CSS</p>
-      <p>✔ JavaScript, jQuery, AJAX</p>
-      <p>✔ Git, GitHub, REST APIs</p>
-      <p>✔ MVC Architecture & CRUD Operations</p>
-    </div>
-
-    <div class="line"></div>
 
     <div class="section">
-      <h2>Achievement</h2>
-      <p>🏆 Created a multi-role Laravel-based task management system with real-time updates.</p>
-      <p>🏆 Successfully deployed a responsive e-commerce site with admin and user panels.</p>
+        <h2>Professional Summary</h2>
+        <p>I am a passionate web developer with a strong focus on Laravel and modern frontend technologies. I strive to build user-friendly, efficient, and scalable web applications with clean and optimized code.</p>
     </div>
 
-    <div class="line"></div>
+    <div class="section">
+        <h2>Skills</h2>
+        <p>- Laravel, PHP, MySQL</p>
+        <p>- HTML5, CSS3, JavaScript</p>
+        <p>- Bootstrap, Tailwind CSS</p>
+        <p>- Git & GitHub</p>
+        <p>- API Integration & Debugging</p>
+    </div>
 
-    <!-- Footer -->
+    <div class="section">
+        <h2>Achievements</h2>
+        <p>- Successfully built multiple Laravel admin/user panels</p>
+        <p>- Improved performance and UI of real-world applications</p>
+        <p>- Recognized as a top-performing intern at NCode Technologies</p>
+    </div>
+
     <div class="footer">
-      <p>For more information, contact me:</p>
-      <a href="#" class="btn">Get in Touch</a>
+        <p>Want to work together or know more?</p>
+        <a href="#" class="btn">Get in Touch</a>
     </div>
-  </div>
+</div>
+
 </body>
 </html>
