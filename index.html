@@ -1,172 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Bio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Professional Bio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #247729, #1e5e23);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #247729, #247729);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-        .bio-container {
-            background: #fff;
-            width: 90%;
-            max-width: 700px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            text-align: left; 
-            padding: 30px;
-        }
+    .bio-container {
+      background: #fff;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      text-align: left;
+      padding: 30px;
+      animation: slideUp 0.8s ease forwards;
+    }
 
-        .bio-container:hover {
-            transform: translateY(-5px);
-        }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+    .bio-container:hover {
+      transform: translateY(-5px);
+    }
 
-        .photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px; 
-            border: 5px solid #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      animation: fadeInLeft 1s ease;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 28px;
-            letter-spacing: 1px;
-        }
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
 
-        h2 {
-            margin: 20px 0 10px;
-            color: #4CAF50;
-            font-size: 20px;
-        }
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      border: 5px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
 
-        .details, .section {
-            padding: 20px;
-            text-align: left;
-        }
+    .photo:hover {
+      transform: scale(1.05);
+    }
 
-        .details p, .section p {
-            margin: 10px 0;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
 
-        .details strong {
-            display: inline-block;
-            width: 160px;
-            color: #333;
-            font-weight: 600;
-        }
+    h1:hover {
+      color: #2E7D32;
+    }
 
-        .line {
-            height: 1px;
-            background: #ddd;
-            margin: 10px 0;
-        }
+    h2 {
+      margin: 20px 0 10px;
+      color: #4CAF50;
+      font-size: 20px;
+      position: relative;
+      animation: fadeInUp 1s ease;
+    }
 
-        .footer {
-            background: #f0f0f0;
-            padding: 10px;
-            font-size: 14px;
-            color: #777;
-            text-align: center;
-        }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-top: 10px;
-            transition: background 0.3s ease;
-        }
+    .details, .section {
+      padding: 20px;
+      text-align: left;
+      animation: fadeInUp 0.8s ease;
+    }
 
-        .btn:hover {
-            background-color: #2E7D32;
-        }
-    </style>
+    .details p, .section p {
+      margin: 10px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .details strong {
+      display: inline-block;
+      width: 160px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .line {
+      height: 1px;
+      background: #ddd;
+      margin: 10px 0;
+    }
+
+    .footer {
+      background: #f0f0f0;
+      padding: 10px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+      animation: fadeInUp 0.9s ease;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-top: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2E7D32;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="bio-container">
-        <!-- Header -->
-        <div class="header">
-           <img src="prahlad.jpg" alt="my photo" class="photo">
-
-            <div>
-                <h1>Prahlad Chaudhary</h1>
-                <p>Web Developer </p>
-            </div>
-        </div>
-        <div class="line"></div>
-        <div class="details">
-            <h2>Personal Details</h2>
-            <p><strong>Age:</strong> 20</p>
-            <p><strong>Date of Birth:</strong> 15th January 2004</p>
-            <p><strong>Religion:</strong> Hindu</p> 
-            <p><strong>Address:</strong> Sola,Ahmedabad,Gujarat</p>
-            <p><strong>Pincode:</strong> 380060</p> 
-            <p><strong>Contact N.:</strong> +91 9602748649</p>
-        </div>
-
-        <div class="line"></div>
-        <div class="section">
-            <h2>Professional Summary</h2>
-            <p>
-                A passionate web developer with in creating responsive and user-friendly websites. Skilled in HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL. 
-              </p>
-        </div>
-
-        <div class="line"></div>
-
-        <!-- Skills -->
-        <div class="section">
-            <h2>Skills</h2>
-            <p>✔ HTML, CSS, Bootstrap</p>
-            <p>✔ JavaScript, PHP</p>
-            <p>✔ MySQL Database</p>
-            <p>✔ E-Commerce Website Development</p>
-        </div>
-
-        <div class="line"></div>
-        <div class="section">
-            <h2>Achievement</h2>
-            <p># Successfully developed and deployed "TechZone Laptop" for online orders.</p>
-            <p># Completed multiple e-commerce projects within tight deadlines.</p>
-        </div>
-
-        <div class="line"></div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>For more information, contact me:</p>
-            <a href="#" class="btn">Get in Touch</a>
-        </div>
+  <div class="bio-container">
+    <!-- Header -->
+    <div class="header">
+      <img src="prahlad.jpg" alt="my photo" class="photo" />
+      <div>
+        <h1>Prahlad Chaudhary</h1>
+        <p>Web Developer</p>
+      </div>
     </div>
+
+    <div class="line"></div>
+
+    <div class="details">
+      <h2>Personal Details</h2>
+      <p><strong>Age:</strong> 20</p>
+      <p><strong>Date of Birth:</strong> 15th January 2004</p>
+      <p><strong>Religion:</strong> Hindu</p>
+      <p><strong>Address:</strong> Sola, Ahmedabad, Gujarat</p>
+      <p><strong>Pincode:</strong> 380060</p>
+      <p><strong>Contact N.:</strong> +91 96027489</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <p>I am a passionate Web Developer with experience in Laravel, PHP, HTML, CSS, and JavaScript. I am currently working on full-stack projects, focusing on scalable and responsive design, efficient backend logic, and delivering seamless user experiences.</p>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Skills -->
+    <div class="section">
+      <h2>Skills</h2>
+      <p>✔ Laravel, PHP, MySQL</p>
+      <p>✔ HTML5, CSS3, Bootstrap, Tailwind CSS</p>
+      <p>✔ JavaScript, jQuery, AJAX</p>
+      <p>✔ Git, GitHub, REST APIs</p>
+      <p>✔ MVC Architecture & CRUD Operations</p>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="section">
+      <h2>Achievement</h2>
+      <p>🏆 Created a multi-role Laravel-based task management system with real-time updates.</p>
+      <p>🏆 Successfully deployed a responsive e-commerce site with admin and user panels.</p>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>For more information, contact me:</p>
+      <a href="#" class="btn">Get in Touch</a>
+    </div>
+  </div>
 </body>
 </html>
