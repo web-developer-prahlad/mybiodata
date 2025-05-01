@@ -107,6 +107,9 @@
     }
   </style>
 </head>
+<!-- Same <head> as yours, only styles extended -->
+<!-- Replace everything inside <body> with this updated code -->
+
 <body>
 
 <div class="bio-container">
@@ -133,10 +136,10 @@
 
   <div class="section reveal">
     <h2>Skills</h2>
-    <p>- Laravel, PHP, MySQL</p>
-    <p>- HTML5, CSS3, JavaScript</p>
-    <p>- Bootstrap, Tailwind CSS</p>
-    <p>- Git, REST APIs</p>
+    <p class="hover-skill">- Laravel, PHP, MySQL</p>
+    <p class="hover-skill">- HTML5, CSS3, JavaScript</p>
+    <p class="hover-skill">- Bootstrap, Tailwind CSS</p>
+    <p class="hover-skill">- Git, REST APIs</p>
   </div>
 
   <div class="section reveal">
@@ -146,6 +149,21 @@
     <p>- Improved application performance & design</p>
   </div>
 
+  <div class="section reveal">
+    <h2>Projects</h2>
+    <p><strong>V-Work Management System</strong> - Laravel-based task/project dashboard</p>
+    <p><strong>Online Mobile Shop</strong> - E-commerce site with cart, orders, and admin panel</p>
+    <p><strong>Chat System</strong> - WhatsApp-like real-time messaging using Laravel</p>
+  </div>
+
+  <div class="section reveal">
+    <h2>Hobbies & Interests</h2>
+    <p>- Exploring new tech stacks</p>
+    <p>- Coding challenges and hackathons</p>
+    <p>- UI/UX design</p>
+    <p>- Traveling and learning languages</p>
+  </div>
+
   <div class="like-section">
     <button class="like-btn" onclick="likeMe()">❤️ Like</button>
     <div class="like-count" id="like-count">0 people liked this</div>
@@ -153,8 +171,7 @@
 </div>
 
 <script>
-  // Typing effect
-  const text = ["Web Developer", "Laravel Developer"];
+  const text = ["Web Developer", "Laravel Lover", "UI/UX Enthusiast", "Passionate Coder"];
   let index = 0, charIndex = 0, current = "";
   function type() {
     if (charIndex < text[index].length) {
@@ -171,7 +188,6 @@
   }
   type();
 
-  // Scroll reveal
   const sections = document.querySelectorAll('.section');
   window.addEventListener('scroll', () => {
     sections.forEach(sec => {
@@ -182,7 +198,6 @@
     });
   });
 
-  // Like button
   let likes = 0;
   function likeMe() {
     likes++;
@@ -190,33 +205,50 @@
     confettiBurst();
   }
 
-  // Confetti effect
   function confettiBurst() {
-    const count = 30;
+    const count = 50;
     for (let i = 0; i < count; i++) {
       const confetti = document.createElement("div");
       confetti.style.position = "fixed";
-      confetti.style.top = Math.random() * window.innerHeight + "px";
+      confetti.style.top = "-20px";
       confetti.style.left = Math.random() * window.innerWidth + "px";
-      confetti.style.width = "8px";
-      confetti.style.height = "8px";
+      confetti.style.width = "10px";
+      confetti.style.height = "10px";
       confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
       confetti.style.borderRadius = "50%";
-      confetti.style.opacity = "0.8";
-      confetti.style.animation = "fall 1.5s linear forwards";
+      confetti.style.opacity = "0.9";
+      confetti.style.zIndex = "9999";
+      confetti.style.animation = `fall ${1 + Math.random()}s ease-in-out forwards`;
       document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 1500);
+      setTimeout(() => confetti.remove(), 2000);
     }
   }
 
-  // Falling confetti animation
   const styleSheet = document.styleSheets[0];
   styleSheet.insertRule(`
     @keyframes fall {
       0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(100vh); opacity: 0; }
     }
   `, styleSheet.cssRules.length);
 </script>
+
+<style>
+  .hover-skill {
+    transition: all 0.3s ease;
+  }
+  .hover-skill:hover {
+    transform: translateX(10px);
+    color: #4caf50;
+  }
+  .header {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    0% { box-shadow: 0 0 10px #4caf50; }
+    100% { box-shadow: 0 0 25px #4caf50; }
+  }
+</style>
+
 </body>
 </html>
